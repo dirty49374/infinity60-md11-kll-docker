@@ -1,3 +1,2 @@
 #!/bin/bash
-cd "$( dirname "${BASH_SOURCE[0]}" )"
-docker run -v /$(pwd)/kiibohd:/kiibohd --rm -i -t fmerizen/ergodox-infinity-layout $*
+docker run -v /$(pwd)/kiibohd:/kiibohd --rm -i -t dirty49374/infinity60-md11-kll-docker $*

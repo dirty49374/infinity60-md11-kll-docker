@@ -7,7 +7,7 @@ KLL = "0.3";
 Date = "2014-09-14";
 Generator = "KIICONF 0.2";
 
-U"ESC" : U"LCK4";
+U"ESC" : U"LCK3";
 U"1" : U"F1";
 U"2" : U"F2";
 U"3" : U"F3";
@@ -41,3 +41,4 @@ U"M" : U"P-";
 U"COMMA" : U"END";
 U"PERIOD" : U"PAGEDOWN";
 U"SLASH" : U"DOWN";
+U"Q" : U"1";

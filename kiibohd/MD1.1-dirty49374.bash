@@ -33,6 +33,9 @@ PartialMaps[1]="MD1.1-dirty49374-1 stdFuncMap"
 PartialMaps[2]="MD1.1-dirty49374-2 stdFuncMap"
 PartialMaps[3]="MD1.1-dirty49374-3 stdFuncMap"
 PartialMaps[4]="MD1.1-dirty49374-4 stdFuncMap"
+PartialMaps[5]="MD1.1-dirty49374-5 stdFuncMap"
+PartialMaps[6]="MD1.1-dirty49374-6 stdFuncMap"
+PartialMaps[7]="MD1.1-dirty49374-7 stdFuncMap"
 
 
 
