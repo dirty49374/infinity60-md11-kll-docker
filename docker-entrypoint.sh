@@ -2,8 +2,7 @@
 set -e
 
 cd /controller
-pwd
-ls -l
+
 case $1 in
 	sh)
 		cp /kiibohd/*.bash Keyboards
@@ -11,19 +10,18 @@ case $1 in
 		cd Keyboards
 		exec /bin/bash
 		;;
-	get)
-		cp Keyboards/MD1.1-Standard.bash /kiibohd
-		;;
 	*)
 		cp /kiibohd/*.bash Keyboards
 		cp /kiibohd/*.kll kll/layouts
 		cd Keyboards
 		echo "compiling..."
-		! ./$1
+		! ./$1.bash
 		echo "removing old..."
 		! rm -rf /kiibohd/output/*
 		echo "copying new..."
-		cp -rf MD11_STANDARD.gcc/* /kiibohd/output
+		for _dir in *; do
+			[ -d "${_dir}" ] && [ "${_dir}" != "Testing" ] && cp -rf "${_dir}" "/kiibohd/output/${_dir}"
+		done
 		echo "done"
 		;;
 esac
