@@ -14,14 +14,17 @@ case $1 in
 		cp /kiibohd/*.bash Keyboards
 		cp /kiibohd/*.kll kll/layouts
 		cd Keyboards
-		echo "compiling..."
-		! ./$1.bash
-		echo "removing old..."
+		
+		echo "* removing old..."
 		! rm -rf /kiibohd/output/*
-		echo "copying new..."
+
+		echo "* compiling..."
+		! ./$1.bash
+
+		echo "* copying new..."
 		for _dir in *; do
 			[ -d "${_dir}" ] && [ "${_dir}" != "Testing" ] && cp -rf "${_dir}" "/kiibohd/output/${_dir}"
 		done
-		echo "done"
+		echo "* done"
 		;;
 esac
